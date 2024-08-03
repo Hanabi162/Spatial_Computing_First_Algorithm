@@ -5,9 +5,9 @@ import time
 import datetime
 import pyodbc
 from pathlib import Path
-from Database_Connect import db_server, db_database, db_username, db_password, sys_info # Secret
+# I don't want to show the database connection details in this script on GitHub
 
-v_input_path = r"C:\Users\ARoumpattana\Desktop\OCR\KP_OCR\Spatial_Computing_VSCODE_KP\Dataset_KP"
+v_input_path = r"C:\Dataset"
 v_sleeptime = 10  # sleep x sec 
 
 def Spatial_Algorithm(image) :
@@ -48,7 +48,7 @@ def Spatial_Algorithm(image) :
     epsilon = 0.01
     
     if mean_brightness >= 119.93 and not (123.45 - epsilon < mean_brightness < 123.45 + epsilon):
-        #print("Day time algorithm")
+        print("Day time algorithm")
         
         masked_image = cv2.bitwise_and(resized_image, resized_image, mask=mask)
             
@@ -91,7 +91,7 @@ def Spatial_Algorithm(image) :
                 }
     
     else:
-        #print("Night time algorithm")
+        print("Night time algorithm")
         draw_RecTangle(resized_image, Light_vertices_view1[0], Light_vertices_view1[1], (0, 255, 0), 3)
         draw_RecTangle(resized_image, Light_vertices_view2[0], Light_vertices_view2[1], (0, 255, 0), 3)
         draw_RecTangle(resized_image, Light_vertices_view3[0], Light_vertices_view3[1], (0, 255, 0), 3)
@@ -147,7 +147,7 @@ def read_images(v_input_path):
                         source = Path(v_input_path)
                         cctv_id = os.path.basename(file)[:11]
                                 
-                        cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+db_server+';DATABASE='+db_database+';UID='+db_username+';PWD='+ db_password)
+                        cnxn = pyodbc.connect(# Do Not Show Connection Details)
                         cursor = cnxn.cursor()
                         
                         image_path = os.path.join(v_input_path, file)
@@ -161,9 +161,10 @@ def read_images(v_input_path):
                         else: 
                             triyangyas = int(result['night_triyangyas']) # truck 
                                 
-                        otran_sqlstr_1 = f"INSERT INTO OCR_TRANSACTIONS (otrans_id,otrans_cctv_id,otrans_source_path,otrans_source_name,otrans_sys_info"
-                        otran_sqlstr_2 = f",otrans_detects) VALUES (NEXT VALUE FOR OTRANS_SEQ,'" + cctv_id + "','" + str(source) + "','" + os.path.basename(image_path) + "','" + str(sys_info) + "','" + str(triyangyas) + "'"
-                        otran_sqlstr_3 = f")"
+                        otra_sqlstr_1 = "String concatenation not shown"
+                        otra_sqlstr_2 = "String concatenation not shown"
+                        otra_sqlstr_3 = "String concatenation not shown"
+
 
                         otran_sqlstr = otran_sqlstr_1+otran_sqlstr_2 + otran_sqlstr_3
                         #print(otran_sqlstr)
