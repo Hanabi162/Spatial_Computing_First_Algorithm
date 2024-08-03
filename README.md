@@ -4,10 +4,10 @@
 This script processes images to detect vehicles within specific areas using OpenCV and NumPy. It performs image resizing, applies spatial algorithms, and integrates with a SQL Server database to store results. The processing adapts based on whether the image is taken during the day or night.
 
 ## Features
-- **Vehicle Detection:** Detects vehicles within predefined areas of the image.
-- **Spatial Algorithm:** Uses spatial algorithms to analyze and process images based on time of day.
-- **Day/Night Processing:** Applies different algorithms for vehicle detection based on brightness to handle varying lighting conditions.
-- **Database Integration:** Saves detection results to a SQL Server database. Database connection details are not shown in the script for security reasons.
+- Vehicle Detection:** Detects vehicles within predefined areas of the image.
+- Spatial Algorithm:** Uses spatial algorithms to analyze and process images based on time of day.
+- Day/Night Processing:** Applies different algorithms for vehicle detection based on brightness to handle varying lighting conditions.
+- Database Integration:** Saves detection results to a SQL Server database. Database connection details are not shown in the script for security reasons.
 - **Image Management:** Processes images from a specified directory and removes them after processing.
 
 ## Usage
