@@ -161,10 +161,9 @@ def read_images(v_input_path):
                         else: 
                             triyangyas = int(result['night_triyangyas']) # truck 
                                 
-                        otra_sqlstr_1 = "String concatenation not shown"
-                        otra_sqlstr_2 = "String concatenation not shown"
-                        otra_sqlstr_3 = "String concatenation not shown"
-
+                        otra_sqlstr_1 = "Not showing string concatenation"
+                        otra_sqlstr_2 = "Not showing string concatenation"
+                        otra_sqlstr_3 = "Not showing string concatenation"
 
                         otran_sqlstr = otran_sqlstr_1+otran_sqlstr_2 + otran_sqlstr_3
                         #print(otran_sqlstr)
