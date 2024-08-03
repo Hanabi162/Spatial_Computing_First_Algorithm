@@ -18,9 +18,9 @@ This script processes images to detect vehicles within specific areas using Open
     python vehicle_detection.py
     ```
 
-3. Database Configuration:** Ensure that the database connection details are configured correctly. The connection string is hidden for security reasons.
+3. **Database Configuration:** Ensure that the database connection details are configured correctly. The connection string is hidden for security reasons.
 
-4. Check Results:** The script processes images to detect vehicles and saves results to the database. It will also print timestamps and file names of processed images.
+4. **Check Results:** The script processes images to detect vehicles and saves results to the database. It will also print timestamps and file names of processed images.
 
 ## Details
 - **Image Resizing:** Resizes images to a smaller size for efficient processing.
