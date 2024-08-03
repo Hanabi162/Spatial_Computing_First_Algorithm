@@ -8,7 +8,7 @@ from pathlib import Path
 # I don't want to show the database connection details in this script on GitHub
 
 v_input_path = r"C:\Dataset"
-v_sleeptime = 10  # sleep x sec 
+v_sleeptime = 10
 
 def Spatial_Algorithm(image) :
     
@@ -137,8 +137,6 @@ def read_images(v_input_path):
     while True:
         if os.path.exists(v_input_path):
             files = os.listdir(v_input_path)
-
-            # waiting ftp
             time.sleep(2)
 
             if files:
@@ -147,7 +145,7 @@ def read_images(v_input_path):
                         source = Path(v_input_path)
                         cctv_id = os.path.basename(file)[:11]
                                 
-                        cnxn = pyodbc.connect(# Do Not Show Connection Details)
+                        cnxn = pyodbc.connect('Do Not Show Connection Details')
                         cursor = cnxn.cursor()
                         
                         image_path = os.path.join(v_input_path, file)
