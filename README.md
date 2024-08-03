@@ -24,7 +24,7 @@ This script processes images to detect vehicles within specific areas using Open
 
 ## Details
 - **Image Resizing:** Resizes images to a smaller size for efficient processing.
-- **Vehicle Detection: Utilizes morphological operations and other image processing techniques to detect vehicles within specified areas.
+- Vehicle Detection: Utilizes morphological operations and other image processing techniques to detect vehicles within specified areas.
 - **Day/Night Algorithm:** Determines if the image is taken during the day or night and applies appropriate vehicle detection algorithms.
 - **Database Queries:** Constructs SQL queries to store detection results, though the exact queries are not shown for security reasons.
 - **File Management:** Deletes processed images to maintain a clean input directory.
