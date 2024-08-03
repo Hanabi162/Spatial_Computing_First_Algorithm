@@ -15,7 +15,7 @@ This script processes images to detect vehicles within specific areas using Open
 
 2. **Run the Script:**
     ```bash
-    python vehicle_detection.py
+    python vehicle_detection_second_zone.py
     ```
 
 3. **Database Configuration:** Ensure that the database connection details are configured correctly. The connection string is hidden for security reasons.
